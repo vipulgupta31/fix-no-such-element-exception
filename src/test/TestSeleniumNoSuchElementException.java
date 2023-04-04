@@ -32,7 +32,6 @@ public class TestSeleniumNoSuchElementException {
 
 	           HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 	           ltOptions.put("build", "NoSuchElementException in Selenium");
-	           ltOptions.put("name", "NoSuchElementException Fix with WebDriverWait");
 	           chromeOptions.setCapability("LT:Options", ltOptions);
 
 
@@ -53,7 +52,7 @@ public class TestSeleniumNoSuchElementException {
 	   public void testNoSuchElmentException()
 	   {
 		   	driver.findElement(By.xpath("//*[contains(text(),'Table Pagination')]")).click();
-		   	driver.findElement(By.id("maxRows1")).click();
+		   	driver.findElement(By.id("maxRows")).click();
 	   }
 	   
 	   @Test
@@ -61,7 +60,7 @@ public class TestSeleniumNoSuchElementException {
 	   {
 		   try {
 			   driver.findElement(By.xpath("//*[contains(text(),'Table Pagination')]")).click();
-			   driver.findElement(By.id("maxRows1")).click();   
+			   driver.findElement(By.id("maxRows")).click();   
 		   }
 		   catch(NoSuchElementException ex)
 		   {
